@@ -1,0 +1,6 @@
+{
+  "name": "Myra Portfolio",
+  "description": "A warm, cozy, study-desk themed portfolio for Myra, exploring software engineering, cloud architecture, and her learning journey.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

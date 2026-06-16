@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Lora", serif;
+  --font-body: "Crimson Pro", serif;
+  --font-mono: "DM Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+
+  /* Custom palette colors */
+  --color-cream: #FAF6F0;
+  --color-paper: #F2EAD8;
+  --color-card-warm: #FFFDF8;
+  --color-wood-dark: #6B4C35;
+  --color-wood-mid: #A0714F;
+  --color-wood-light: #C49A6C;
+  --color-sage: #7C9E7A;
+  --color-amber: #D4914A;
+  --color-dusty: #B07BAC;
+  --color-blue-accent: #6A8EAE;
+  --color-ink: #2C1F14;
+  --color-ink-light: #6B5744;
+  --color-ink-muted: #A89080;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Paper Texture Overlay */
+.paper-grain {
+  position: relative;
+}
+
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 100;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Subtle Notebook Grid Background */
+.notebook-grid {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, var(--color-wood-light) 1px, transparent 1px);
+  background-opacity: 0.1;
+}
+
+/* Handwritten Underline Animation */
+.hand-drawn-line {
+  position: relative;
+}
+
+.hand-drawn-line::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-wood-mid);
+  border-radius: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .hand-drawn-line::after {
+  transform: scaleX(1);
+}
+
+/* Mini custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-paper);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-wood-light);
+}
+
