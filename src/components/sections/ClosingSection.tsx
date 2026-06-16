@@ -34,7 +34,7 @@ const galleryItems: GalleryItem[] = [
     scope: "Central Java Provincial Level",
     tag: "Infrastructure Automation",
     story:
-      "Competed with top cloud engineers under high-pressure scenarios to script server configuration automation and manage secure containerization.",
+      "Competed with top cloud engineers under high-pressure scenarios to finish 3 pilars of cloud automitation moduls in tight time-span.",
   },
   {
     id: "smarta-logika",
@@ -43,7 +43,7 @@ const galleryItems: GalleryItem[] = [
     scope: "National Level AI Hackathon",
     tag: "AI Frontend Developer",
     story:
-      "Engineered a rapid diagnostic dashboard powered by lightweight AI routing and structured layouts in under 36 hours.",
+      "Solve mental health problem with an AI based journaling platform, finding method to actually enhance mental health and apply it to tech development.",
   },
   {
     id: "dinacom",
@@ -52,7 +52,7 @@ const galleryItems: GalleryItem[] = [
     scope: "National Hackathon & Presentation",
     tag: "Presenter & Frontend Developer",
     story:
-      "Coordinated frontend development, crafted the project proposal dossier, and pitched the social impact value to panels of industry leaders.",
+      "Coordinated frontend development, crafted the project proposal dossier, make it to final and challenged to finish the product in a 12 hours Hackathon",
   },
   {
     id: "gacci",
@@ -143,8 +143,7 @@ export default function ClosingSection() {
             My Highlights &amp; Competition Gallery
           </h2>
           <p className="font-body text-lg text-ink-light">
-            A live storyboard of dynamic challenges. Click any polaroid memory
-            card below to zoom in and expand its conceptual design layout.
+            Still on progress, looking up for more challenge
           </p>
         </div>
 
