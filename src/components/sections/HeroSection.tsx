@@ -62,9 +62,8 @@ export default function HeroSection() {
             variants={itemVariants}
             className="inline-flex items-center gap-2"
           >
-            <span className="flex h-2.5 w-2.5 rounded-full bg-sage animate-ping" />
             <span className="font-mono text-xs text-wood-dark tracking-wider uppercase select-none">
-              Welcome to my cozy study workspace 👋
+              Oh! Look who just enter Myra's study desk
             </span>
           </motion.div>
 
@@ -89,9 +88,8 @@ export default function HeroSection() {
               </span>
             </h1>
             <p className="font-body text-xl md:text-2xl text-ink-light font-light leading-relaxed max-w-2xl">
-              Siswa SMK kelas 11 yang tertarik mengeksplorasi perkembangan tren
-              dalam teknologi. Senang berkompetisi untuk mengukur "Perkembangan
-              diriku sudah sampai mana, ya?"
+              Most of my favorite experiences started with one sentence: "I've
+              never done this before."
             </p>
           </motion.div>
 
@@ -100,7 +98,7 @@ export default function HeroSection() {
             variants={itemVariants}
             className="font-body text-lg text-ink/80 max-w-xl leading-relaxed"
           >
-            Part-time student, 9 to 5 challenger
+            How far can i go? I guess there's only one way to find out.
           </motion.p>
 
           {/* Call to Actions (Tactile desk button triggers) */}
@@ -158,16 +156,6 @@ export default function HeroSection() {
           {/* Main Visual background: Cozy Desk Drawing or stylized stack */}
           <div className="absolute inset-0 bg-paper/10 border-2 border-dashed border-wood-light/10 rounded-lg p-4 flex items-center justify-center notebook-grid" />
 
-          {/* Wooden Mug decoration absolute */}
-          <div className="absolute bottom-6 right-8 text-6xl opacity-80 select-none animate-pulse filter drop-shadow-sm">
-            ☕
-          </div>
-
-          {/* Plant absolute */}
-          <div className="absolute top-6 left-6 text-5xl opacity-85 select-none animate-bounce duration-5000 filter drop-shadow-sm">
-            🌿
-          </div>
-
           {/* Desktop Stacked Cards imitating study papers & notes */}
           {/* Card 1: Cloud Architecture Note (blue tint) */}
           <div className="absolute top-12 right-6 w-56 md:w-64 z-20">
@@ -197,7 +185,6 @@ export default function HeroSection() {
             <StickyNote color="yellow" rotation={-4}>
               <div className="space-y-1">
                 <div className="flex items-center gap-1 text-sm">
-                  <span>💡</span>
                   <span className="font-sans font-bold text-xs uppercase text-amber">
                     Growth Motto
                   </span>

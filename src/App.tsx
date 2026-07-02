@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, Variants } from "motion/react";
 import {
   Coffee,
   Compass,
@@ -20,7 +20,7 @@ import {
   Menu,
   X,
   ArrowUpRight,
-  Linkedin
+  Linkedin,
 } from "lucide-react";
 
 // Import custom sections and components
@@ -46,6 +46,14 @@ const accentColorMap = {
   amber: "bg-[#FFF2E6] border-[#F2DAC1] text-[#4A2D18]",
   purple: "bg-[#f5e6ff] border-[#e6c1f2] text-[#39184a]",
 } as const;
+const itemVariants: Variants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring", stiffness: 100 }, // ✅ langsung valid
+  },
+};
 
 type AccentColor = keyof typeof accentColorMap;
 
@@ -222,30 +230,32 @@ export default function App() {
               <span className="font-display text-2xl font-bold italic text-wood-dark">
                 Myra Isadora<span className="text-amber">.</span>
               </span>
-              <div className="flex items-center gap-1 bg-[#FFF9E6] px-2 py-0.5 rounded text-[10px] font-mono text-ink-light border border-amber/15">
-                <Coffee className="w-2.5 h-2.5 text-amber animate-pulse" />
-                <span>workspace</span>
+              <div className="flex items-center gap-1 bg-[#E9A03B] px-2 py-0.5 rounded text-[10px] font-mono text-ink-light border border-amber/15">
+                <Coffee className="w-2.5 h-2.5 text-wood-dark animate-pulse" />
+                <span className="text-wood-dark">workspace</span>
               </div>
             </div>
-
-            <span className="font-mono text-[9px] text-ink-muted bg-paper/50 px-2 py-0.5 rounded">
-              v1.2
-            </span>
           </div>
 
           {/* Intro description */}
           <div className="space-y-2">
             <p className="font-body text-sm text-ink-light leading-relaxed">
-              Siswa SMK kelas 11 yang tertarik mengeksplorasi perkembangan tren
-              dalam teknologi. Senang berkompetisi untuk mengukur "Perkembangan
-              diriku sudah sampai mana, ya?"
+              Most of my favorite experiences started with one sentence: "I've
+              never done this before."
             </p>
           </div>
+          {/* Simple honest bio */}
+          <motion.p
+            variants={itemVariants}
+            className="font-body text-lg text-ink/80 max-w-xl leading-relaxed"
+          >
+            How far can i go? I guess there's only one way to find out.
+          </motion.p>
 
           {/* Tactile profile photo card from Hero Section for beautiful layout representation */}
           <div className="relative pt-4 flex justify-center">
             {/* Hanging element block */}
-            <div className="w-44 h-56 bg-[#FFFDF8] p-3 pb-5 border border-wood-light/30 shadow-md relative rounded-xs transform -rotate-1 hover:rotate-1 hover:scale-102 transition-transform duration-300">
+            <div className="w-44 h-56 bg-[#7A8C3E] p-3 pb-5 border border-wood-light/30 shadow-md relative rounded-xs transform -rotate-1 hover:rotate-1 hover:scale-102 transition-transform duration-300">
               {/* Tape sticker decoration */}
               <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 w-14 h-3 bg-[#E6D4AA]/60 transform rotate-1 border border-white/20 shadow-2xs pointer-events-none" />
 
@@ -259,10 +269,10 @@ export default function App() {
               </div>
 
               <div className="text-center pt-2 select-none">
-                <span className="font-display italic text-xs text-wood-dark font-semibold block leading-none">
+                <span className="font-display italic text-xs text-ink-light font-semibold block leading-none">
                   Myra Isadora
                 </span>
-                <span className="font-mono text-[8px] text-ink-muted uppercase tracking-wider block mt-1">
+                <span className="font-mono text-[8px] text-wood-dark uppercase tracking-wider block mt-1">
                   Seeking opportunity to grow
                 </span>
               </div>
@@ -304,8 +314,8 @@ export default function App() {
         {/* Sidebar Footer block: Simple copy mail card and metadata (anti-slop, clean details) */}
         <div className="space-y-4 pt-4 border-t border-wood-light/10 font-sans">
           {/* Quick mail setup */}
-          <div className="bg-[#FFFDF8] border border-wood-light/20 p-4 rounded-sm shadow-2xs space-y-2 relative overflow-hidden">
-            <span className="font-mono text-[8px] text-ink-muted uppercase tracking-wider block">
+          <div className="bg-[#E9A03B] border border-wood-light/20 p-4 rounded-sm shadow-2xs space-y-2 relative overflow-hidden">
+            <span className="font-mono text-[8px] text-wood-dark uppercase tracking-wider block">
               CONTACT SHELF
             </span>
             <p className="font-body text-xs text-wood-dark font-semibold truncate leading-none">
@@ -365,7 +375,6 @@ export default function App() {
           {/* Notebook decorative header / current active tab details */}
           <div className="max-w-4xl mx-auto flex items-center justify-between border-b border-wood-light/15 pb-4 mb-6 select-none font-sans">
             <div className="flex items-center gap-2">
-              <span className="text-xl">📓</span>
               <div>
                 <span className="font-mono text-[9px] text-ink-muted uppercase tracking-widest block">
                   Notebook Tab View
@@ -373,13 +382,6 @@ export default function App() {
                 <span className="font-display font-semibold italic text-sm text-wood-dark capitalize">
                   myra's workspace / {activeTab} section
                 </span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-1.5 bg-[#EBF7EB] text-[#1D4A1D] border border-[#D1ECD1] text-[10px] font-mono px-2 py-0.5 rounded-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-sage animate-pulse" />
-                <span>Ready to read</span>
               </div>
             </div>
           </div>
@@ -417,8 +419,8 @@ export default function App() {
 
         {/* Humble desk bottom helper bar (anti-slop credits) */}
         <footer className="h-10 border-t border-wood-light/10 bg-paper/5 shrink-0 px-6 xl:px-12 flex items-center justify-between select-none font-sans">
-          <span className="font-mono text-[9px] text-[#A89080]">
-            INDEX CARDS: 05 TABS · ROTATING BOARD
+          <span className="font-mono text-[9px] text-[#EAEFF7]">
+            Go on, have a look!
           </span>
           <span className="font-mono text-[9px] text-ink-muted flex items-center gap-1">
             <span>Handcrafted portfolio in 2026</span>

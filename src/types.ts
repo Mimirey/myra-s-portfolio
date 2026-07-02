@@ -7,6 +7,10 @@ export interface Project {
   accent: "amber" | "green" | "blue"| "purple";
   year: string;
   link?: string;
+  repoUrl?: string;
+  repoNote?: string;
+  videoUrl?: string;
+  videoType?: "file" | "drive"
 }
 
 export interface Competition {

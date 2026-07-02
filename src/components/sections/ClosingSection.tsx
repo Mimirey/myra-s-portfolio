@@ -203,10 +203,10 @@ export default function ClosingSection() {
                     </div>
 
                     <div className="space-y-1">
-                      <h4 className="font-display font-semibold text-sm text-wood-dark leading-tight">
+                      <h4 className="font-display font-semibold text-sm text-sage leading-tight">
                         {item.competitionName}
                       </h4>
-                      <p className="font-body text-xs text-ink-light leading-relaxed">
+                      <p className="font-body text-xs text-wood-mid leading-relaxed">
                         {item.story}
                       </p>
                     </div>
@@ -215,7 +215,6 @@ export default function ClosingSection() {
 
                 {/* Scope marker footer inside polaroid */}
                 <div className="mt-4 pt-3 border-t border-wood-light/5 text-[9px] font-mono text-ink-muted flex items-center justify-between">
-                  <span>INDEX: MEMORY</span>
                   <span className="flex items-center gap-0.5 uppercase">
                     <MapPin className="w-2.5 h-2.5 shrink-0 text-sage" />{" "}
                     {item.scope.split(" ")[0]}

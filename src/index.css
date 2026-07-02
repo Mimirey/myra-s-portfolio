@@ -8,19 +8,35 @@
   --font-sans: "Inter", sans-serif;
 
   /* Custom palette colors */
-  --color-cream: #FAF6F0;
-  --color-paper: #F2EAD8;
-  --color-card-warm: #FFFDF8;
-  --color-wood-dark: #6B4C35;
-  --color-wood-mid: #A0714F;
-  --color-wood-light: #C49A6C;
-  --color-sage: #7C9E7A;
-  --color-amber: #D4914A;
-  --color-dusty: #B07BAC;
-  --color-blue-accent: #6A8EAE;
-  --color-ink: #2C1F14;
-  --color-ink-light: #6B5744;
-  --color-ink-muted: #A89080;
+   /* 🌌 Blue Hour */
+  --color-cream: #0D1321;       /* Deep Night */
+
+  /* 📖 Paper */
+  --color-paper: #E8E6DF;       /* Moonlight Paper */
+  --color-card-warm: #1B2238;   /* Card / Surface */
+
+  /* ✨ Text */
+  --color-wood-dark: #F4F1EA;   /* Primary Text */
+  --color-wood-mid: #E8A34B;    /* Curiosity Light */
+  --color-wood-light: #AAB6CC;  /* Secondary Text */
+
+  /* 🌱 Growth */
+  --color-sage: #6F8F7A;
+
+  /* 💡 Lamp */
+  --color-amber: #F0B35A;
+
+  /* 🌆 Blue Hour Sky */
+  --color-dusty: #6F79A8;
+
+  /* 🌙 Moon Accent */
+  --color-blue-accent: #8FA7C8;
+
+  /* ✍ Ink */
+  --color-ink: #F3F6FA;
+  --color-ink-light: #C6CFDD;
+  --color-ink-muted: #8D97A8;
+
 }
 
 @layer base {

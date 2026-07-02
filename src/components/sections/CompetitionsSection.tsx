@@ -110,7 +110,7 @@ export default function CompetitionsSection() {
               </div>
 
               {/* Year Stamp */}
-              <div className="md:self-start lg:self-center font-mono text-xs text-ink-muted bg-paper/50 px-2 py-1 rounded">
+              <div className="md:self-start lg:self-center font-mono text-xs text-wood-dark bg-paper/50 px-2 py-1 rounded">
                 🏆 {comp.year}
               </div>
             </motion.div>

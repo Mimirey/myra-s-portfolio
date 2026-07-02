@@ -23,7 +23,10 @@ export default function AboutSection() {
   };
 
   return (
-    <section id="about" className="py-20 bg-paper/20 border-y border-wood-light/10 relative overflow-hidden">
+    <section
+      id="about"
+      className="py-20 bg-paper/20 border-y border-wood-light/10 relative overflow-hidden"
+    >
       {/* Subtle Dot Grid pattern in background */}
       <div className="absolute inset-0 opacity-5 pointer-events-none notebook-grid" />
 
@@ -36,7 +39,7 @@ export default function AboutSection() {
           viewport={{ once: true, margin: "-100px" }}
           className="lg:col-span-7 space-y-6"
         >
-          <SectionTag icon="🌱">A Little About Me</SectionTag>
+          <SectionTag >A Little About Me</SectionTag>
 
           <SectionTitle
             title="Building Curious Mindset in Mind"
@@ -44,32 +47,64 @@ export default function AboutSection() {
           />
 
           <div className="font-body text-lg text-ink space-y-4 leading-relaxed max-w-2xl">
+            <p>Hi, Myra speaking here</p>
             <p>
-              Hi, Myra speaking here, ...
+              I was born and raised in Tanjung Balai Karimun, a small island in
+              Indonesia's Riau Islands Province. My curiosity and desire to grow
+              brought me hundreds of kilometers away to Kudus, Central Java,
+              where I pursue my studies at SMK Raden Umar Said. Living far from
+              home has been one of the biggest turning points in my life. It
+              taught me how to adapt to new environments, take responsibility
+              for myself, and appreciate that personal growth often begins
+              outside of my comfort zone. Kind of experience that make me
+              realize how important it is to make sure my future life stay in
+              shape.
             </p>
             <p>
-              I came from Tanjung Balai Karimun, small island from Kepulauan Riau. My curiousity of growth led me to Kudus, Jawa Tengah to continue my study at SMK Raden Umar Said Kudus. 
-              Being faaaar from home has taught me many things about getting on my own, adaptability with surroundings, even managing my own personal life with responsibility.
-              Kind of experience that make me realize how important it is to make sure my future life stay in shape.
-            </p>
-            <p>
-              Since entering Vocational Highschool back in 2024, I tend to take my highschool era as "Opportunity" to grow myself up and learning new things
-              {" "}
+              Since entering vocational high school, I've treated every
+              opportunity as a chance to learn something completely new. I
+              believe growth rarely comes from staying comfortable, so whenever
+              an opportunity challenged me, I chose to take it—even when I felt
+              unprepared.{" "}
               <strong className="text-wood-dark font-medium font-display italic">
-                “Theres strong urge to make sure using all facilities for my growth"
-              </strong>{" "} 
-              Thus, since 10th grade, i've tried many things with main goal is to push myself growing and growing. I once joined Game Design Document making competition about Virtual Reality Game despite that "I havent even play Virtual Reality game once", 
-              i just believe in my imagination and just shoot the shot. Well, made it to Top 10 final and having discussion with judges makes me believe to try even more in learning.
+                Most of the opportunities that shaped me started with the same sentence: "I've never done this before."
+              </strong>{" "}
+              One example was a Game Design Document competition for a Virtual
+              Reality game. At that time, I had never even tried a VR headset
+              before. Still, I trusted my imagination, gave it my best shot, and
+              unexpectedly made it into the Top 10 finalists. Discussing my
+              ideas with the judges became one of the experiences that
+              encouraged me to keep exploring unfamiliar challenges.
             </p>
             <p>
-              Another time i also assigned for LKS Cloud Computing while having 0 knowledge about it. Thank God, mentors in my school are supportive that they believe in me. This was a big challenge knowing that i need to make sure having consistency in learning this so new field for me.
-              Glad to say i made it to region stage and given Medallion of Excellence title for it. Again, i learnt how to keep consistency thru competition.
+              Another challenge came when I was selected to represent my school
+              in the Cloud Computing competition, despite having absolutely no
+              background in the field. It meant learning everything from scratch
+              while keeping up with school. Thanks to the guidance of my mentors
+              and consistent practice, I reached the regional stage and received
+              the Medallion of Excellence. More importantly, the experience
+              taught me that consistency matters more than talent alone.
             </p>
             <p>
-              I also like to challenge myself handing communication and social by joining a project with my mentor, there i learn how to discuss with clients about needs and make a product based on it. 
+              Beyond competitions, I also enjoy working with people. Through
+              projects with my mentors, I've had the opportunity to communicate
+              with clients, understand their requirements, and translate their
+              ideas into products that solve real problems. Those experiences
+              helped me realize that building software isn't only about writing
+              code—it's also about listening, collaborating, and creating
+              something meaningful for others.
+            </p>
+
+            <p>
+              Today, I'm interested in software development, particularly in
+              mobile and web technologies, while continuing to explore cloud
+              computing and other fields that challenge me to learn. I enjoy
+              stepping into unfamiliar territory because every new challenge
+              expands the way I think and helps me grow, both as a developer and
+              as a person.
             </p>
             <strong className="text-wood-dark font-medium font-display italic">
-                “Cuz for me, theres no lose if the main goal is for experience"
+              “Cuz for me, theres no lose if the main goal is for experience"
             </strong>
           </div>
         </motion.div>
@@ -87,7 +122,10 @@ export default function AboutSection() {
             {/* Binder rings illustration on the left margin */}
             <div className="absolute left-0 top-0 bottom-0 w-4 flex flex-col justify-space-around items-center py-4 border-r border-dashed border-wood-light/15 pointer-events-none">
               {[...Array(6)].map((_, i) => (
-                <div key={i} className="w-5 h-2.5 bg-zinc-300 border border-zinc-400 rounded-full my-auto transform -translate-x-1.5" />
+                <div
+                  key={i}
+                  className="w-5 h-2.5 bg-zinc-300 border border-zinc-400 rounded-full my-auto transform -translate-x-1.5"
+                />
               ))}
             </div>
 
@@ -97,7 +135,9 @@ export default function AboutSection() {
                 <h3 className="font-display font-semibold italic text-lg text-wood-dark">
                   Myra's Desk Principles
                 </h3>
-                <span className="font-mono text-[10px] text-ink-muted">FIND OUT · LEARN · ADAPT</span>
+                <span className="font-mono text-[10px] text-ink-muted">
+                  FIND OUT · LEARN · ADAPT
+                </span>
               </div>
 
               {/* Principle 1 */}
@@ -106,8 +146,13 @@ export default function AboutSection() {
                   <Lightbulb className="w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="font-display font-medium text-sm text-wood-dark leading-tight">ALWAYS ask why</h4>
-                  <p className="font-body text-xs text-ink-light">Find out why should it be done that way, why not the other way? can i build my own way?</p>
+                  <h4 className="font-display font-medium text-sm text-wood-dark leading-tight">
+                    ALWAYS ask why
+                  </h4>
+                  <p className="font-body text-xs text-ink-light">
+                    Find out why should it be done that way, why not the other
+                    way? can i build my own way?
+                  </p>
                 </div>
               </div>
 
@@ -117,8 +162,12 @@ export default function AboutSection() {
                   <Cpu className="w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="font-display font-medium text-sm text-wood-dark leading-tight">Much to learn if you look up</h4>
-                  <p className="font-body text-xs text-ink-light">Learn smart, not just hard</p>
+                  <h4 className="font-display font-medium text-sm text-wood-dark leading-tight">
+                    Much to learn if you look up
+                  </h4>
+                  <p className="font-body text-xs text-ink-light">
+                    Learn smart, not just hard
+                  </p>
                 </div>
               </div>
 
@@ -128,8 +177,12 @@ export default function AboutSection() {
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="font-display font-medium text-sm text-wood-dark leading-tight">Be Adaptable, why would you limit yourself?</h4>
-                  <p className="font-body text-xs text-ink-light">Sticking to one method only, seriously? in this big 2026?</p>
+                  <h4 className="font-display font-medium text-sm text-wood-dark leading-tight">
+                    Be Adaptable, why would you limit yourself?
+                  </h4>
+                  <p className="font-body text-xs text-ink-light">
+                    Sticking to one method only, seriously? in this big 2026?
+                  </p>
                 </div>
               </div>
             </div>
